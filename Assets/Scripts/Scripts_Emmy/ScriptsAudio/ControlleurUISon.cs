@@ -16,7 +16,7 @@ public class ControlleurUISon : MonoBehaviour
     public void OnMenu(InputValue value)
     {
         Debug.Log("OnMenu appelé");
-        
+       
         // Si le panneau est déjà actif, on le désactive
         if (_panneauSon.activeSelf)
         {
