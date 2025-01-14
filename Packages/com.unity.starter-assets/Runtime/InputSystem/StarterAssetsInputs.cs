@@ -17,7 +17,7 @@ namespace StarterAssets
 		public bool analogMovement;
 
 		[Header("Mouse Cursor Settings")]
-		public bool cursorLocked = false; /*mdofier*/
+		public bool cursorLocked = true; 
 		public bool cursorInputForLook = true;
 
 #if ENABLE_INPUT_SYSTEM
@@ -68,17 +68,14 @@ namespace StarterAssets
 		
 		private void OnApplicationFocus(bool hasFocus)
 		{
-			// Ne verrouille pas le curseur
- SetCursorState(false); // Toujours déverrouillé
-			//SetCursorState(cursorLocked);
+
+			SetCursorState(cursorLocked);
 		}
 
 		private void SetCursorState(bool newState)
 		{
-			// Garde le curseur visible et libre
-			 Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
-            Cursor.visible = !newState;
-			//Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
+			
+			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
 	}
 	
