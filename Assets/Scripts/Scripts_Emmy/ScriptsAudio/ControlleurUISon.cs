@@ -15,18 +15,18 @@ public class ControlleurUISon : MonoBehaviour
     // Cette méthode est appelée lors d'un événement d'entrée
     public void OnMenu(InputValue value)
     {
-        Debug.Log("OnMenu appelé");
-        
+     
+       
         // Si le panneau est déjà actif, on le désactive
         if (_panneauSon.activeSelf)
         {
-             Debug.Log("OnMenu désactive");
+       
             _panneauSon.SetActive(false);
         }
         else
         {
             // Sinon on l'active
-             Debug.Log("OnMenu active");
+           
             _panneauSon.SetActive(true);
         }
       
@@ -34,11 +34,16 @@ public class ControlleurUISon : MonoBehaviour
     }
 
     // // Pour fermer le menu
-    public void FermerMenu()
+  private void FermerMenu()
     {
-        if (_panneauSon.activeSelf)
-        {
+           if(_panneauSon.gameObject.activeInHierarchy ==true){
             _panneauSon.SetActive(false);
         }
+        Debug.Log("test fermer");
+        
+        // if (_panneauSon.activeSelf)
+        // {
+        //     _panneauSon.SetActive(false);
+        // }
     }
 }
