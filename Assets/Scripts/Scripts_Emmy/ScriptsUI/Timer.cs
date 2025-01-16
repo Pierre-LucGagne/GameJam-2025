@@ -22,7 +22,10 @@ public class Timer : MonoBehaviour
  void Awake()
  {
     
- //_infosDuNiveau.init();
+ if (_infosDuJeu != null)
+    {
+        _infosDuJeu.init();
+    }
  }
 
 
