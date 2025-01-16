@@ -11,10 +11,26 @@ public class InfosJeu : ScriptableObject
     // [SerializeField] public string leNomDuJeu;
 
     // [SerializeField] public int _nbDePointsRequis;
-
-    // [SerializeField] public string _tempsDeJeu;
+  [SerializeField] public float _tempsDeJeu;
+    [SerializeField] public float _tempsEcoule;
+    [SerializeField] public bool firstTime;
+    // [SerializeField] public float _nbPvDepart;
     // //Variable qui dit si on gagne la partie
-    // public bool _defaitePartie;
-    // public bool _victoirePartie;
+ public bool _defaitePartie;
+ public bool _victoirePartie;
+
+
+
+     public void init()
+    {   Debug.Log("allo: "+firstTime);
+   
+       // if(firstTime == false)
+        //{
+        _tempsEcoule = _tempsDeJeu;
+        firstTime = true;
+     
+        //}
+        
+    }
 
 }
