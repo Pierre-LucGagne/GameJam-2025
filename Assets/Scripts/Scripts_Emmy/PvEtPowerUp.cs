@@ -33,6 +33,7 @@ public class PvEtPowerUp : MonoBehaviour
     // Méthode appelée lorsqu'on gagne un PV
     public void BonusPV(int PvCup)
     {
+        
         // Ajout du bonus PV
         _infosJoueurs._bonusPv += PvCup;
         _nbPVPresentement = Mathf.Min(_infosJoueurs._nbPvDepart + _infosJoueurs._bonusPv, _infosJoueurs._nbPvDepart);
