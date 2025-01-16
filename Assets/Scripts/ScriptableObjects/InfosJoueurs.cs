@@ -12,7 +12,10 @@ public class InfosJoueurs : ScriptableObject
 {
     
 //     public string _prenomJoueurs;
-//     public float _nbPoints;
+//nombre de pv
+     public float _nbPv;
+     public float _nbPoints;
+ 
 //     public string _causeMort;
 
 //     [SerializeField] public string _tempsDuJoueur;
