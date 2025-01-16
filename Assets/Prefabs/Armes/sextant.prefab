@@ -510,8 +510,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5852635917265870512}
   - component: {fileID: 2533540953365325960}
-  - component: {fileID: 3198787901150163723}
   - component: {fileID: -1339540089259634022}
+  - component: {fileID: 1691160422614248382}
   m_Layer: 0
   m_Name: sextant
   m_TagString: Untagged
@@ -558,27 +558,6 @@ MonoBehaviour:
   playerCamera: {fileID: 0}
   positionOffset: {x: 0.29, y: -0.23, z: 0.82}
   rotationOffset: {x: -75.79, y: -0.09, z: -87.4}
---- !u!114 &3198787901150163723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7415027259836449863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1873aea989812c84f9b4dce8a47ae409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 7415027259836449863}
-  firePoint: {fileID: 5852635917265870512}
-  positionOffset: {x: 0, y: 0, z: 0}
-  projectileSpeed: -40
-  maxDistance: 50
-  fireCooldown: 0.5
-  jouerSon:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!54 &-1339540089259634022
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -606,6 +585,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1691160422614248382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7415027259836449863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8f51739cdf2bc499c023a88ec999e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 0}
+  firePoint: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  projectileSpeed: 10
+  maxDistance: 20
+  fireCooldown: 0.5
+  jouerSon:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7637323602462331858
 GameObject:
   m_ObjectHideFlags: 0
