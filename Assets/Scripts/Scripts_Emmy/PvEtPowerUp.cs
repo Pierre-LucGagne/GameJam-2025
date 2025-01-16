@@ -1,67 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine.UI;
+
 public class PvEtPowerUp : MonoBehaviour
 {
-     [SerializeField] private InfosJoueurs _infosJoueurs;
-     [SerializeField] private InfosJeu _infosDuJeu;
-     //image des pv 
-     public Image[] sectionPv;
-  private int _nbPVPresentement;
+    [SerializeField] private InfosJoueurs _infosJoueurs;
+    [SerializeField] private InfosJeu _infosDuJeu;
+
+    // Images des PV
+    public Image[] sectionPv;
+
+    private int _nbPVPresentement;
+
     void Start()
     {
+        
         _nbPVPresentement = _infosJoueurs._nbPvDepart;
-        _infosJoueurs._nbPv = _nbPVPresentement;
-
-          if (sectionPv.Length != _infosJoueurs._nbPvDepart)
-        {
-            Debug.LogWarning("Le nombre de sections PV ne correspond pas au nombre de PV de départ !");
-        }
-            MettreAJourBarrePv();
+        MettreAJourBarrePV();
     }
 
-     private void PerdrePV(){
-     
-    //Enleve un pv au nombre de pv présentement
-    _nbPVPresentement--;
-    
-   
-     // Vérifie si l'index pour le tableau de cœurs est dans les limites du tableau
-        if (_nbPVPresentement >= 0 && _nbPVPresentement < sectionPv.Length)
-        {
-            // Désactive un cœur
-            sectionPv[_nbPVPresentement].gameObject.SetActive(false);
-           // On perd des points collectés
-        //    _infosJoueurs._nbPoints -= _pointsPerdus;
-
-        }
-           _infosJoueurs._nbPv = _nbPVPresentement;
-    
-   if (_nbPVPresentement <= 0)
+    // Méthode appelée lorsqu'on perd un PV
+    private void PerdrePV()
     {
-     
-        FinDePartie();
+        _nbPVPresentement--;
+        MettreAJourBarrePV();
+        VerifierFinDePartie();
     }
 
-}
+    // Méthode appelée lorsqu'on gagne un PV
+    public void BonusPV(int PvCup)
+    {
+        // Ajout du bonus PV
+        _infosJoueurs._bonusPv += PvCup;
+        _nbPVPresentement = Mathf.Min(_infosJoueurs._nbPvDepart + _infosJoueurs._bonusPv, _infosJoueurs._nbPvDepart);
 
-private void MettreAJourBarrePv()
+        MettreAJourBarrePV();
+    }
+
+    // Met à jour visuellement la barre de PV
+    private void MettreAJourBarrePV()
     {
         for (int i = 0; i < sectionPv.Length; i++)
         {
-            sectionPv[i].gameObject.SetActive(i < _nbPVPresentement);
+            if (i < _nbPVPresentement)
+            {
+                Debug.Log(_nbPVPresentement);
+                sectionPv[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                sectionPv[i].gameObject.SetActive(false);
+            }
         }
-}
- private void FinDePartie()
-    {
-        _infosDuJeu._victoirePartie = false;
-        _infosDuJeu._defaitePartie = true;
+    }
 
-        // Exemple : charger une scène ou afficher un écran
-        // SceneManager.LoadScene("SceneDefaite");
-        Debug.Log("défaite");
+    // Vérifie si la partie est terminée
+    private void VerifierFinDePartie()
+    {
+        if (_nbPVPresentement <= 0)
+        {
+            _infosDuJeu._victoirePartie = false;
+            _infosDuJeu._defaitePartie = true;
+
+            Debug.Log("Fin de partie : défaite.");
+            // Ajoute ici la logique pour changer de scène, afficher un menu, etc.
+        }
     }
 }
