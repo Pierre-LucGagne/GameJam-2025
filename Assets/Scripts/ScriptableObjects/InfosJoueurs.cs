@@ -17,7 +17,9 @@ public class InfosJoueurs : ScriptableObject
 
   //au cours de la partie
  public float _nbPv;
-     public float _nbPoints;
+
+ public int _bonusPv;
+      public float _nbPoints;
  
 //     public string _causeMort;
 
