@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.UI;
 //Pour créer le scriptable object joueur
 [CreateAssetMenu(fileName="InfosJoueurs", menuName ="SO/NouveauJoueur")]
 

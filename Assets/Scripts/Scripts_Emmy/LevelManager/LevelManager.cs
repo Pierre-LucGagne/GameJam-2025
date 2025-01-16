@@ -24,7 +24,10 @@ public class LevelManager : MonoBehaviour
         }
         
     }
-
+   public void QuiteGame()
+    {
+        Application.Quit();
+    }
     public void LoadScene(Scene sceneName)
     {
         SceneManager.LoadScene(sceneName.ToString());
@@ -50,11 +53,9 @@ public class LevelManager : MonoBehaviour
     }
 
 public enum Scene{
-        SceneIntro,
-        SceneSallePrincipale,
-        SceneDataMining,
-        SceneSpaceInvader,
-        TowerDefense
+        Accueil,
+        JeuSceneTestBuild,
+      
 
     }
 

@@ -7,9 +7,10 @@ public class NewGame : MonoBehaviour
     [SerializeField] private InfosJeu _infosDuJeu;
 
     // Start is called before the first frame update
-    void Start()
+    public void NewGameStart()
     {
         _infosDuJeu.init();
+        Debug.Log("Jeu recommence");
     }
 
    
