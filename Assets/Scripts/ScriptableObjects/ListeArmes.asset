@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: ListeArmes
   m_EditorClassIdentifier: 
   armes:
-  - _nomArme: "Math\xE9matueur"
-    _estAcheter: 0
   - _nomArme: Astrofuseur
     _estAcheter: 0
   - _nomArme: Sextant
