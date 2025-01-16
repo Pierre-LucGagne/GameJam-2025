@@ -11,15 +11,22 @@ public class VictoireOuDefaite : MonoBehaviour
     [SerializeField] private InfosJoueurs _infosJoueurs;
     [SerializeField] private InfosJeu _infosDuJeu;
 
-    
+
+    [SerializeField] private GameObject _canvasVictoire;
 
    
-
+    void Start()
+    {
+        // Cache l'écran de victoire au départ
+        _canvasVictoire.gameObject.SetActive(false);
+    }
     
     void Update()
     {
+        Debug.Log(_infosJoueurs._nbPv);
          if (_infosJoueurs._nbPv > 0 && _infosDuJeu._tempsEcoule == 0f)  // si temps fini et barre de vie a encore des points 
         {
+    
             //Pour appler le void victoire 
             Victoire();
         }
@@ -29,7 +36,7 @@ public class VictoireOuDefaite : MonoBehaviour
 
     private void Victoire(){
     //Pour appeler le changement de scene 
-    ChangementDeScene();
+   AfficherCanvasVictoire();
     //Change la valeur de la variable de l'infoNiveau qui permet de déterminer si la partie est gagné ou perdu ce qui determine quel canvas entre le canvas de défaite et victoire est affiché   
     _infosDuJeu._victoirePartie = true;
     _infosDuJeu._defaitePartie = false;
@@ -37,10 +44,10 @@ public class VictoireOuDefaite : MonoBehaviour
     }
 
     //Pour changer de scene
-    private void ChangementDeScene(){
+    private void AfficherCanvasVictoire(){
+    _canvasVictoire.gameObject.SetActive(true);
 
-     int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-     SceneManager.LoadScene(nextSceneIndex); 
+
 
      
      

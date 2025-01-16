@@ -48,7 +48,7 @@ public class PvEtPowerUp : MonoBehaviour
         {
             if (i < _nbPVPresentement)
             {
-                Debug.Log(_nbPVPresentement);
+          
                 sectionPv[i].gameObject.SetActive(true);
             }
             else
