@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c318bbcb258b94fbcb3d3853f7d5a5, type: 3}
   m_Name: ListeArmes
   m_EditorClassIdentifier: 
-  armes: []
+  armes:
+  - _nomArme: "Math\xE9matueur"
+    _estAcheter: 0
+  - _nomArme: Astrofuseur
+    _estAcheter: 0
+  - _nomArme: Sextant
+    _estAcheter: 0
