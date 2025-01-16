@@ -23,5 +23,7 @@ public class GameReload : MonoBehaviour
             // Réinitialise les objectifs lorsque la scène est rechargée
             listeArmes.ReinitialiserArmes();
         }
+
+        
     }
 }

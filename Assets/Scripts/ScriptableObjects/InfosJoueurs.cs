@@ -13,7 +13,10 @@ public class InfosJoueurs : ScriptableObject
     
 //     public string _prenomJoueurs;
 //nombre de pv
-     public float _nbPv;
+  public int _nbPvDepart; 
+
+  //au cours de la partie
+ public float _nbPv;
      public float _nbPoints;
  
 //     public string _causeMort;
