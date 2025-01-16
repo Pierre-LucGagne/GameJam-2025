@@ -15,5 +15,7 @@ MonoBehaviour:
   armes:
   - _nomArme: Astrofuseur
     _estAcheter: 0
+    _prix: 1000
   - _nomArme: Sextant
     _estAcheter: 0
+    _prix: 500
