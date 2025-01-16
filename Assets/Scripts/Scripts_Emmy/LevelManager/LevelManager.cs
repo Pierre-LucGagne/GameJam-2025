@@ -61,9 +61,5 @@ public enum Scene{
     }
 
     // Méthode pour quitter l'application
-    public void QuiteGame()
-    {
-        Debug.Log("Application quittée.");
-        Application.Quit();
-    }
+    
 }
