@@ -22,7 +22,7 @@ public class InfosJeu : ScriptableObject
 
 
      public void init()
-    {   Debug.Log("allo: "+firstTime);
+    {   
    
        // if(firstTime == false)
         //{
