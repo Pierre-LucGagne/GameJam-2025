@@ -25,7 +25,7 @@ public class VictoireOuDefaite : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(_infosJoueurs._nbPv);
+        // Debug.Log(_infosJoueurs._nbPv);
          if (_infosJoueurs._nbPv > 0 && _infosDuJeu._tempsEcoule == 0f)  // si temps fini et barre de vie a encore des points 
         {
     

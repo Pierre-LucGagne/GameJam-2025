@@ -38,7 +38,7 @@ public class RetourAccueil : MonoBehaviour
         if (_levelManager != null)
         {
             Debug.Log("Retour à l'écran d'accueil.");
-            //_levelManager.RetourAccueil(); // Appelle la méthode RetourAccueil dans le LevelManager
+            _levelManager.RetourAccueil(); // Appelle la méthode RetourAccueil dans le LevelManager
         }
     }
 }
