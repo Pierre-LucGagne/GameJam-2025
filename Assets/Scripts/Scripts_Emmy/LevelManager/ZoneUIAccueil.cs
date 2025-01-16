@@ -18,7 +18,7 @@ public class ZoneUIAccueil : MonoBehaviour
     }
     public void DebutGame(){
          
-        _levelManager.LoadAsyncScene("SceneSallePrincipale");
+        //_levelManager.LoadAsyncScene("SceneJeu");
       
     }
 //mis dans Gestionnaire AUdio
@@ -42,7 +42,7 @@ public class ZoneUIAccueil : MonoBehaviour
 
    public void QuiteGame()
     {
-        Debug.Log($"fonctionne");
+        // Debug.Log($"fonctionne");
         Application.Quit();
     }
 
