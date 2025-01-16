@@ -18,6 +18,8 @@ public class VictoireOuDefaite : MonoBehaviour
     void Start()
     {
         // Cache l'écran de victoire au départ
+          _infosDuJeu._victoirePartie = false;
+    _infosDuJeu._defaitePartie = false;
         _canvasVictoire.gameObject.SetActive(false);
     }
     
@@ -52,8 +54,23 @@ public class VictoireOuDefaite : MonoBehaviour
      
      
     }
+   public void ReinitialiserVictoire()
+    {
+        // Réinitialise les variables de victoire/défaite et autres valeurs de jeu
+        _infosDuJeu._victoirePartie = false;
+        _infosDuJeu._defaitePartie = false;
 
     
+    }
+
+    public void RelancerJeu()
+    {
+        // Réinitialise les valeurs avant de recharger la scène
+        ReinitialiserVictoire();
+
+        // Recharge la scène actuelle
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
 }  
 

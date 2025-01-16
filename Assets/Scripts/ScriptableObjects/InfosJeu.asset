@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: InfosJeu
   m_EditorClassIdentifier: 
   _tempsDeJeu: 6
-  _tempsEcoule: 0
+  _tempsEcoule: 3.0505333
   firstTime: 1
   _defaitePartie: 0
   _victoirePartie: 0

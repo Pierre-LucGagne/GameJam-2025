@@ -66,7 +66,6 @@ public class PvEtPowerUp : MonoBehaviour
             _infosDuJeu._victoirePartie = false;
             _infosDuJeu._defaitePartie = true;
 
-            Debug.Log("Fin de partie : défaite.");
             // Ajoute ici la logique pour changer de scène, afficher un menu, etc.
         }
     }
