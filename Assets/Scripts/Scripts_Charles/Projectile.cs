@@ -10,9 +10,5 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        // Si vous utilisez un trigger au lieu d'un collider physique
-        Destroy(gameObject);
-    }
+    
 }

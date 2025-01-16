@@ -35,10 +35,10 @@ public class TireArme : MonoBehaviour
             return;
         }
 
-        // Calculer la position décalée du firePoint
-        Vector3 shootPosition = firePoint.position + positionOffset;
+        // Calculer la position finale en tenant compte de l'offset et de la rotation du joueur
+        Vector3 shootPosition = firePoint.position + firePoint.TransformDirection(positionOffset);
 
-        // Instancie le projectile à la position décalée et la rotation du point de tir
+        // Instancie le projectile à la position calculée et la rotation actuelle du firePoint
         GameObject projectile = Instantiate(projectilePrefab, shootPosition, firePoint.rotation);
 
         // Ajoute une force au projectile pour le faire bouger
