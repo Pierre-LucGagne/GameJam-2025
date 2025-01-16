@@ -14,7 +14,7 @@ public class InfosJeu : ScriptableObject
   [SerializeField] public float _tempsDeJeu;
     [SerializeField] public float _tempsEcoule;
     [SerializeField] public bool firstTime;
-    [SerializeField] public float _nbPoints;
+    // [SerializeField] public float _nbPvDepart;
     // //Variable qui dit si on gagne la partie
  public bool _defaitePartie;
  public bool _victoirePartie;
@@ -23,6 +23,7 @@ public class InfosJeu : ScriptableObject
 
      public void init()
     {   Debug.Log("allo: "+firstTime);
+   
        // if(firstTime == false)
         //{
         _tempsEcoule = _tempsDeJeu;

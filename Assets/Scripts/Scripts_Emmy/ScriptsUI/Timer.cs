@@ -47,7 +47,7 @@ public class Timer : MonoBehaviour
      if (_infosDuJeu._tempsEcoule<= 0f){
         Debug.Log($"h");
         _tempsJeuFini = true;
-        _infosDuJeu._tempsEcoule =0f;
+        _infosDuJeu._tempsEcoule =0f; //défaite
         //  _zoneFinScene.AllerSceneCredits(); //pour changer de scène
 
        
