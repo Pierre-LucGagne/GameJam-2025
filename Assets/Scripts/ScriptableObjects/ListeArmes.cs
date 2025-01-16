@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "ListeObjectifs", menuName = "ScriptableObject/NouveauxObjectifs", order = 1)]
+
+[CreateAssetMenu(fileName = "ListeArmes", menuName = "ScriptableObject/NouvellesArmes", order = 1)]
 
 public class ListeArmes : ScriptableObject
 {
@@ -35,7 +36,7 @@ public class ListeArmes : ScriptableObject
         return armes.All(o => o._estAcheter);
         
     }
-    public void ReinitialiserObjectifs()
+    public void ReinitialiserArmes()
     {
         // Réinitialise tous les objectifs à non accomplis
         foreach (Arme arme in armes)
