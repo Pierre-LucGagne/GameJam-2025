@@ -7,22 +7,23 @@ public class TireArme : MonoBehaviour
     [Header("Paramètres de l'arme")]
     [SerializeField] private GameObject projectilePrefab; // Le projectile à tirer
     [SerializeField] private Transform firePoint; // Le point de tir (où les projectiles apparaissent)
-    [SerializeField] private float fireRate = 1f; // Temps entre chaque tir (en secondes)
+    [SerializeField] private Vector3 positionOffset; // Décalage de la position du point de tir
     [SerializeField] private float projectileSpeed = 10f; // Vitesse du projectile
     [SerializeField] private float maxDistance = 20f; // Distance maximale que le projectile peut parcourir
+    [SerializeField] private float fireCooldown = 0.5f; // Temps de recharge entre chaque tir (en secondes)
 
-    private float timeSinceLastShot = 0f;
+    private float timeSinceLastShot = 0f; // Temps écoulé depuis le dernier tir
 
     void Update()
     {
         // Mise à jour du temps depuis le dernier tir
         timeSinceLastShot += Time.deltaTime;
 
-        // Si l'intervalle de tir est écoulé, tire un projectile
-        if (timeSinceLastShot >= fireRate)
+        // Vérifie si le bouton gauche de la souris (clic) est enfoncé et si le délai de tir est écoulé
+        if (Input.GetMouseButtonDown(0) && timeSinceLastShot >= fireCooldown)
         {
             Shoot();
-            timeSinceLastShot = 0f; // Réinitialise le temps
+            timeSinceLastShot = 0f; // Réinitialiser le temps après un tir
         }
     }
 
@@ -34,8 +35,11 @@ public class TireArme : MonoBehaviour
             return;
         }
 
-        // Instancie le projectile à la position et la rotation du point de tir
-        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        // Calculer la position décalée du firePoint
+        Vector3 shootPosition = firePoint.position + positionOffset;
+
+        // Instancie le projectile à la position décalée et la rotation du point de tir
+        GameObject projectile = Instantiate(projectilePrefab, shootPosition, firePoint.rotation);
 
         // Ajoute une force au projectile pour le faire bouger
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
