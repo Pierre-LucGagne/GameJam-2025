@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daec3236c0ef65f4e9216699e9e6acac, type: 3}
   m_Name: Joueur1
   m_EditorClassIdentifier: 
-  _nbPoints: 0
+  _nbPvDepart: 100
+  _nbPv: 100
+  _bonusPv: 25
+  _nbPoints: 500

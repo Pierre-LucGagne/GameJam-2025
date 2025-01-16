@@ -15,6 +15,8 @@ public class ListeArmes : ScriptableObject
     {
         public string _nomArme;
         public bool _estAcheter;
+
+        public float _prix;
        
     }
    public List<Arme> armes = new List<Arme>();
