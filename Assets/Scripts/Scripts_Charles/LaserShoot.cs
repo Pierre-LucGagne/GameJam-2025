@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-
-public class TireArme : MonoBehaviour
+public class LaserShoot : MonoBehaviour
 {
-    [Header("Paramètres de l'arme")]
+     [Header("Paramètres de l'arme")]
     [SerializeField] private GameObject projectilePrefab; // Le projectile à tirer
     [SerializeField] private Transform firePoint; // Le point de tir (où les projectiles apparaissent)
     [SerializeField] private Vector3 positionOffset; // Décalage de la position du point de tir
@@ -16,18 +15,35 @@ public class TireArme : MonoBehaviour
 
     public UnityEvent jouerSon; // Événement Unity pour jouer le son
 
-    private float timeSinceLastShot = 0f; // Temps écoulé depuis le dernier tir
+    private bool isFiring = false; // Indique si le joueur maintient le clic enfoncé
+    private Coroutine shootingCoroutine; // Référence à la coroutine de tir
 
     void Update()
     {
-        // Mise à jour du temps depuis le dernier tir
-        timeSinceLastShot += Time.deltaTime;
+        // Vérifie si le clic gauche est enfoncé
+        if (Input.GetMouseButtonDown(0) && !isFiring)
+        {
+            isFiring = true;
+            shootingCoroutine = StartCoroutine(ShootingCoroutine());
+        }
 
-        // Vérifie si le bouton gauche de la souris (clic) est enfoncé et si le délai de tir est écoulé
-        if (Input.GetMouseButtonDown(0) && timeSinceLastShot >= fireCooldown)
+        // Vérifie si le clic gauche est relâché
+        if (Input.GetMouseButtonUp(0) && isFiring)
+        {
+            isFiring = false;
+            if (shootingCoroutine != null)
+            {
+                StopCoroutine(shootingCoroutine);
+            }
+        }
+    }
+
+    private IEnumerator ShootingCoroutine()
+    {
+        while (isFiring)
         {
             Shoot();
-            timeSinceLastShot = 0f; // Réinitialiser le temps après un tir
+            yield return new WaitForSeconds(fireCooldown); // Attend le délai entre chaque tir
         }
     }
 
@@ -42,11 +58,8 @@ public class TireArme : MonoBehaviour
         // Calculer la position décalée du firePoint
         Vector3 shootPosition = firePoint.position + positionOffset;
 
-        // Définir une rotation spécifique pour le projectile
-        Quaternion definedRotation = Quaternion.Euler(-110f, 50f, 0f); // Exemple : 45° sur l'axe X
-
-        // Appliquer la rotation définie au projectile
-        GameObject projectile = Instantiate(projectilePrefab, shootPosition, firePoint.rotation * definedRotation);
+        // Créer le projectile
+        GameObject projectile = Instantiate(projectilePrefab, shootPosition, firePoint.rotation);
 
         // Ajoute une force au projectile pour le faire bouger
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
@@ -91,25 +104,5 @@ public class TireArme : MonoBehaviour
 
         // Détruire le projectile une fois la distance atteinte
         Destroy(projectile);
-    }
-
-    // Fonction qui gère les collisions du projectile
-    private void OnCollisionEnter(Collision collision)
-    {
-        // Détruire le projectile dès qu'il entre en collision avec un objet
-        Destroy(collision.gameObject); // Détruire l'objet avec lequel le projectile entre en collision
-
-        // Détruire le projectile
-        Destroy(gameObject);
-    }
-
-    // Si vous préférez utiliser un trigger (si le projectile est configuré en trigger)
-    private void OnTriggerEnter(Collider other)
-    {
-        // Détruire le projectile dès qu'il entre en collision avec un objet
-        Destroy(other.gameObject); // Détruire l'objet avec lequel le projectile entre en collision
-
-        // Détruire le projectile
-        Destroy(gameObject);
     }
 }
