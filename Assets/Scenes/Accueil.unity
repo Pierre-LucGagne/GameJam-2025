@@ -303,17 +303,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6, y: 9, z: 4}
   m_Center: {x: -0.5, y: 3, z: 0}
---- !u!114 &266515526 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2220498932640612218, guid: 817ab12766d51d643bb04e2f22de913a, type: 3}
-  m_PrefabInstance: {fileID: 367920742}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &282690180
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68914828aa5ab1549a9a3aec0a6df48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _quitterGame: {fileID: 266515526}
+  _retourAccueil: {fileID: 1432542515}
 --- !u!1001 &367920742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1214,6 +1203,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7658667294006203689, guid: 817ab12766d51d643bb04e2f22de913a, type: 3}
   m_PrefabInstance: {fileID: 367920742}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1179441768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1976702159736088918, guid: 817ab12766d51d643bb04e2f22de913a, type: 3}
+  m_PrefabInstance: {fileID: 367920742}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1209271777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,6 +1230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1237796474}
+  - component: {fileID: 1237796475}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -1258,6 +1253,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1833345216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1237796475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237796473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce04318185467e4a90a727a8b0ab7a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1257767766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,6 +1445,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _infosJoueurs: {fileID: 11400000, guid: 833087e39dcc59043a582c363ad2ce5d, type: 2}
   _infosDuJeu: {fileID: 11400000, guid: 2870f9f5d5db1fb41a46a8aae614045c, type: 2}
+  _canvasVictoire: {fileID: 1179441768}
+--- !u!114 &1432542515 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2220498932640612218, guid: 817ab12766d51d643bb04e2f22de913a, type: 3}
+  m_PrefabInstance: {fileID: 367920742}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1485394554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3022,6 +3041,7 @@ MonoBehaviour:
   _infosJoueurs: {fileID: 11400000, guid: 833087e39dcc59043a582c363ad2ce5d, type: 2}
   _falseCup: {fileID: 705021097}
   _nbPvBonus: 25
+  _texteBonus: {fileID: 971066511}
   _cooldown: 2
 --- !u!23 &7685886779997485795
 MeshRenderer:
