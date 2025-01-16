@@ -8,9 +8,13 @@ public class EnnemySpawn : MonoBehaviour
     [Header("Paramètres des Ennemis")]
     public GameObject ennemi1; // Type d'ennemi 1
     public GameObject ennemi2; // Type d'ennemi 2
-    public float initialSpawnInterval = 5f; // Intervalle initial d'apparition
-    public float reducedSpawnInterval = 3f; // Intervalle réduit d'apparition
-    public float intervalChangeTime = 40f; // Temps après lequel l'intervalle est réduit
+
+    [Header("Paramètres des Vagues")]
+    public float initialSpawnInterval = 5f; // Intervalle de la première vague
+    public float reducedSpawnInterval = 3f; // Intervalle de la deuxième vague
+    public float finalSpawnInterval = 1f; // Intervalle de la troisième vague
+    public float intervalChangeTime1 = 40f; // Temps de transition à la deuxième vague
+    public float intervalChangeTime2 = 80f; // Temps de transition à la troisième vague
 
     private float spawnInterval;
     private float timeSinceLastSpawn = 0f;
@@ -20,7 +24,7 @@ public class EnnemySpawn : MonoBehaviour
 
     void Start()
     {
-        spawnZone = GetComponent<Collider>();
+        spawnZone = GetComponent<Collider>(); 
 
         if (spawnZone == null)
         {
@@ -51,10 +55,14 @@ public class EnnemySpawn : MonoBehaviour
         elapsedTime += Time.deltaTime;
         timeSinceLastSpawn += Time.deltaTime;
 
-        // Réduction de l'intervalle d'apparition
-        if (elapsedTime >= intervalChangeTime)
+        // Ajustement de l'intervalle en fonction du temps
+        if (elapsedTime >= intervalChangeTime2)
         {
-            spawnInterval = reducedSpawnInterval;
+            spawnInterval = finalSpawnInterval; // Troisième vague
+        }
+        else if (elapsedTime >= intervalChangeTime1)
+        {
+            spawnInterval = reducedSpawnInterval; // Deuxième vague
         }
 
         // Vérifie si un ennemi doit être spawn
