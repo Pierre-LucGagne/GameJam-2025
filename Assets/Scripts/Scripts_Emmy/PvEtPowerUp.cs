@@ -14,6 +14,13 @@ public class PvEtPowerUp : MonoBehaviour
     void Start()
     {
         _nbPVPresentement = _infosJoueurs._nbPvDepart;
+        _infosJoueurs._nbPv = _nbPVPresentement;
+
+          if (sectionPv.Length != _infosJoueurs._nbPvDepart)
+        {
+            Debug.LogWarning("Le nombre de sections PV ne correspond pas au nombre de PV de départ !");
+        }
+            MettreAJourBarrePv();
     }
 
      private void PerdrePV(){
@@ -31,17 +38,28 @@ public class PvEtPowerUp : MonoBehaviour
         //    _infosJoueurs._nbPoints -= _pointsPerdus;
 
         }
+           _infosJoueurs._nbPv = _nbPVPresentement;
     
    if (_nbPVPresentement <= 0)
     {
      
-  
-        //Changement de scene
-    //    _gestionScenes.SceneSuivante();
-       //Change la valeur de la variable de l'infoNiveau qui permet de déterminer si la partie est gagné ou perdu ce qui determine quel canvas entre le canvas de défaite et victoire est affiché
-       _infosDuJeu._victoirePartie = false;
-      _infosDuJeu._defaitePartie = true;
+  FinDePartie();
     }
 
 }
+private void MettreAJourBarrePv()
+    {
+        for (int i = 0; i < sectionPv.Length; i++)
+        {
+            sectionPv[i].gameObject.SetActive(i < _nbPVPresentement);
+        }
+}
+ private void FinDePartie()
+    {
+        _infosDuJeu._victoirePartie = false;
+        _infosDuJeu._defaitePartie = true;
+
+        // Exemple : charger une scène ou afficher un écran
+        SceneManager.LoadScene("SceneDefaite");
+    }
 }
