@@ -17,7 +17,6 @@ public class PvEtPowerUp : MonoBehaviour
 
     void Start()
     {
-        
         _nbPVPresentement = _infosJoueurs._nbPvDepart;
         MettreAJourBarrePV();
     }
@@ -48,7 +47,7 @@ public class PvEtPowerUp : MonoBehaviour
         {
             if (i < _nbPVPresentement)
             {
-                Debug.Log(_nbPVPresentement);
+          
                 sectionPv[i].gameObject.SetActive(true);
             }
             else
@@ -66,7 +65,6 @@ public class PvEtPowerUp : MonoBehaviour
             _infosDuJeu._victoirePartie = false;
             _infosDuJeu._defaitePartie = true;
 
-            Debug.Log("Fin de partie : défaite.");
             // Ajoute ici la logique pour changer de scène, afficher un menu, etc.
         }
     }
