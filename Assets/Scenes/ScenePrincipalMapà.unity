@@ -2289,6 +2289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ennemi1: {fileID: 1816621390}
   ennemi2: {fileID: 98113573057687950}
+  ennemi3: {fileID: 3805030379844004209}
   initialSpawnInterval: 5
   reducedSpawnInterval: 3
   finalSpawnInterval: 1
@@ -4150,6 +4151,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2977496d2a97f3349b3b74a96d603a83, type: 3}
+--- !u!1 &3805030379844004209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1137559180172069899, guid: a57ea25bb33e4c14482a0bd70a1e10f7, type: 3}
+  m_PrefabInstance: {fileID: 1319212559461645110}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6275373475805296458
 PrefabInstance:
   m_ObjectHideFlags: 0
