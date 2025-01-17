@@ -3125,15 +3125,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3b4e0e3fc04047342a7d386be610d26d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.07872
+      value: -0.254
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3b4e0e3fc04047342a7d386be610d26d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.83500004
+      value: 1.002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3b4e0e3fc04047342a7d386be610d26d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.8518677
+      value: 0.921
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3b4e0e3fc04047342a7d386be610d26d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3347,6 +3347,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2667371021095918389, guid: 817ab12766d51d643bb04e2f22de913a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3146061047827422915, guid: 817ab12766d51d643bb04e2f22de913a, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -3402,6 +3406,10 @@ PrefabInstance:
     - target: {fileID: 5322587080891782475, guid: 817ab12766d51d643bb04e2f22de913a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167238290398634752, guid: 817ab12766d51d643bb04e2f22de913a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7602600803278040821, guid: 817ab12766d51d643bb04e2f22de913a, type: 3}
       propertyPath: m_IsActive
@@ -6994,12 +7002,12 @@ MonoBehaviour:
   _stanleyCupPrefab: {fileID: 884373591}
   _spawnPoints:
   - {fileID: 1285184801}
-  - {fileID: 1182503527}
   - {fileID: 701368435}
   - {fileID: 892884911}
-  - {fileID: 701368435}
-  - {fileID: 674865435}
   - {fileID: 793380996}
+  - {fileID: 674865435}
+  - {fileID: 535851849}
+  - {fileID: 1182503527}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -7021,6 +7029,7 @@ SceneRoots:
   - {fileID: 8936351599515417083}
   - {fileID: 1374160311}
   - {fileID: 862673441}
+  - {fileID: 884373590}
   - {fileID: 1285184801}
   - {fileID: 701368435}
   - {fileID: 892884911}
@@ -7028,4 +7037,3 @@ SceneRoots:
   - {fileID: 674865435}
   - {fileID: 535851849}
   - {fileID: 1182503527}
-  - {fileID: 884373590}
