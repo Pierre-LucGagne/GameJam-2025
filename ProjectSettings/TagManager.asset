@@ -10,6 +10,7 @@ TagManager:
   - gun
   - telescope
   - coincoin
+  - floor
   layers:
   - Default
   - TransparentFX
