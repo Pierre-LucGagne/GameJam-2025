@@ -59,7 +59,7 @@ public class LevelManager : MonoBehaviour
     public void RetourAccueil()
     {
         Debug.Log("Retour à la scène d'accueil.");
-        LoadScene(Scene.Accueil);
+        LoadScene(Scene.DEVscenemathieu);
     }
 
     // Méthode pour quitter l'application
