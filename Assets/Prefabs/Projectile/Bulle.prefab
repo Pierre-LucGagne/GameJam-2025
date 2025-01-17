@@ -119,6 +119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0298ac20d927f74087a3e168be90e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 11400000, guid: d48362a8cdd5978468786d3c95ec562b, type: 2}
+  infoEnnemi: {fileID: 11400000, guid: 0bf684829007fb9429851dc30a16e970, type: 2}
+  infoEnnemi2: {fileID: 11400000, guid: 4c745bda0fdfe79478e3ba3dcb16b8b9, type: 2}
+  infoEnnemi3: {fileID: 11400000, guid: 548b9c2de134dc448816a5435680ab99, type: 2}
 --- !u!54 &-3886786151577883879
 Rigidbody:
   m_ObjectHideFlags: 0

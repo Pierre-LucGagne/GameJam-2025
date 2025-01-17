@@ -11,14 +11,15 @@ TagManager:
   - telescope
   - coincoin
   - floor
+  - ennemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - Ennemi
   - 
   - 
   - 

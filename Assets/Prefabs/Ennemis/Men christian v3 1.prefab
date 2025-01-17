@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6888186866047257583}
   - component: {fileID: 7052470618225673616}
   - component: {fileID: 3225167687666534743}
+
   m_Layer: 0
   m_Name: Men christian v3 1
   m_TagString: Untagged
@@ -34,6 +35,7 @@ Transform:
   - {fileID: 7232578501733459396}
   - {fileID: 2233356323370577433}
   - {fileID: 2261059264359007062}
+
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &7052470618225673616
@@ -71,6 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4723702590851828153, guid: 05db902138ae0ea4e8037fc440a23954, type: 3}
+
 --- !u!1 &505528934384816232
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +168,7 @@ GameObject:
   - component: {fileID: 7232578501733459396}
   - component: {fileID: 6762135402782834425}
   - component: {fileID: 5983323800343202795}
-  m_Layer: 0
+
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,6 +240,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+
 --- !u!1 &9069971698654542592
 GameObject:
   m_ObjectHideFlags: 0

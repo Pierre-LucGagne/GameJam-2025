@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8984508589292336789}
   - component: {fileID: 2752089781957417142}
   - component: {fileID: 6067088635835627381}
-  m_Layer: 0
+
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,6 +249,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+
 --- !u!1 &3605955661629471153
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8685295201018201352}
   - component: {fileID: 2277512715270331852}
+
   m_Layer: 0
   m_Name: Men christian v3 5
   m_TagString: Untagged
@@ -282,6 +284,7 @@ Transform:
   - {fileID: 8984508589292336789}
   - {fileID: 9137542561542730559}
   - {fileID: 7517050738955870486}
+
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &2277512715270331852

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90583f04fc700ea44b2f146462191039, type: 3}
   m_Name: Ennemi_2
   m_EditorClassIdentifier: 
-  pointDeVie: 20
-  degat: 15
+  pointDeVie: 75
+  pointDeVieMax: 75
+  degat: 12
   TypeAttaque: 2
   prendDesDegatsSon: {fileID: 0}
   mortSon: {fileID: 0}

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdb18d8578f39b4ab00dd1385766350, type: 3}
   m_Name: Bulle
   m_EditorClassIdentifier: 
-  degat: 0
+  degat: 20
