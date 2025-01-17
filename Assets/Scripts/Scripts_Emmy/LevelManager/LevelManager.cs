@@ -51,8 +51,8 @@ public class LevelManager : MonoBehaviour
     // Enumération des scènes disponibles
     public enum Scene
     {
-        Accueil,
-        JeuSceneTestBuild 
+        DEVscenemathieu,
+        ScenePrincipalMapà,
     }
 
     // Méthode pour revenir à l'écran d'accueil
