@@ -96,6 +96,8 @@ public class TireArme : MonoBehaviour
     // Fonction qui gère les collisions du projectile
     private void OnCollisionEnter(Collision collision)
     {
+
+
         // Détruire le projectile dès qu'il entre en collision avec un objet
         Destroy(collision.gameObject); // Détruire l'objet avec lequel le projectile entre en collision
 
@@ -106,6 +108,7 @@ public class TireArme : MonoBehaviour
     // Si vous préférez utiliser un trigger (si le projectile est configuré en trigger)
     private void OnTriggerEnter(Collider other)
     {
+
         // Détruire le projectile dès qu'il entre en collision avec un objet
         Destroy(other.gameObject); // Détruire l'objet avec lequel le projectile entre en collision
 

@@ -24,7 +24,7 @@ public class AffichageDesPoints : MonoBehaviour
            AfficherPoints();
     }
      public void AfficherPoints(){
-      Debug.Log(_infosJoueurs._nbPv);
+     
        
        _texteNbPoints.text = _infosJoueurs._nbPoints.ToString();
          

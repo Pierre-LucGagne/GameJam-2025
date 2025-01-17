@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daec3236c0ef65f4e9216699e9e6acac, type: 3}
-  m_Name: Joueur1
+  m_Script: {fileID: 11500000, guid: da464e788b282c344b9f7bda86f14386, type: 3}
+  m_Name: Telescope
   m_EditorClassIdentifier: 
-  _nbPvDepart: 100
-  _nbPv: 100
-  _nbPoints: 500
-  _bonusPv: 380
+  _nomArme: Telescope
+  _prixArme: 1000
+  acheter: 0
