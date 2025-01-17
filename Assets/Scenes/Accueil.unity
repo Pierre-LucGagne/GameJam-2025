@@ -1545,6 +1545,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listeArmes: {fileID: 11400000, guid: ca54e75d518e9f043a0a9a9c79ae0449, type: 2}
+--- !u!1001 &963602700
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 937451010187938475}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 36.530624
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.52000046
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.6172333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.7099991
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_Name
+      value: gun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+--- !u!4 &963602701 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+  m_PrefabInstance: {fileID: 963602700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &971066509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,6 +2424,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1442754556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+  m_PrefabInstance: {fileID: 963602700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1485394554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3027,6 +3110,7 @@ Transform:
   m_Children:
   - {fileID: 5242107654571092301}
   - {fileID: 4253012991774917636}
+  - {fileID: 963602701}
   - {fileID: 1173597076}
   - {fileID: 329885567}
   - {fileID: 1215234297}
@@ -4113,6 +4197,7 @@ MonoBehaviour:
   _selectSextant: {fileID: 1986016632}
   _selectCoinCoin: {fileID: 1204081370}
   _selectTelescope: {fileID: 1590876403}
+  _gun: {fileID: 1442754556}
   _texteNouvelArme: {fileID: 378795999}
   _texteAlerte: {fileID: 597040125}
 --- !u!222 &8515595824206409664

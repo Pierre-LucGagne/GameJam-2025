@@ -21,6 +21,9 @@ public class TilesArmes : MonoBehaviour
    [SerializeField] private GameObject _selectTelescope; 
 
 
+   [SerializeField] private GameObject _gun; 
+
+
 
     [SerializeField] private TextMeshProUGUI _texteNouvelArme;
     [SerializeField] private TextMeshProUGUI _texteAlerte;
@@ -47,12 +50,12 @@ public class TilesArmes : MonoBehaviour
          
          if (other.gameObject.CompareTag("coincoin"))
             {
-            
+            _gun.SetActive(false);
                 
             _texteNouvelArme.gameObject.SetActive(true);
             _falseCoinCoin.SetActive(true);
 
-            _infosJoueurs._nbPoints -= _infosArme._prixArme;
+       
 
                 // Détruit l'objet StanleyCup collecté
                 Destroy(other.gameObject);
@@ -64,7 +67,7 @@ public class TilesArmes : MonoBehaviour
       
             if (other.gameObject.CompareTag("sextant"))
             {
-            
+              _gun.SetActive(false);
                 
             _texteNouvelArme.gameObject.SetActive(true);
             _falseSextant.SetActive(true);
@@ -79,7 +82,7 @@ public class TilesArmes : MonoBehaviour
 
              if (other.gameObject.CompareTag("telescope"))
             {
-            
+             _gun.SetActive(false);
                 
             _texteNouvelArme.gameObject.SetActive(true);
             _falseTelescope.SetActive(true);
@@ -99,6 +102,24 @@ public class TilesArmes : MonoBehaviour
             if (other.gameObject.CompareTag("sextant"))
             {
             _texteAlerte.gameObject.SetActive(true);
+            StartCoroutine(HideTextAfterDelay(_texteAlerte, 2f));
+            
+
+            
+            }
+
+             if (other.gameObject.CompareTag("telescope"))
+            {
+            _texteAlerte.gameObject.SetActive(true);
+            StartCoroutine(HideTextAfterDelay(_texteAlerte, 2f));
+            
+
+            
+            }
+             if (other.gameObject.CompareTag("coincoin"))
+            {
+            _texteAlerte.gameObject.SetActive(true);
+            StartCoroutine(HideTextAfterDelay(_texteAlerte, 2f));
             
 
             
@@ -106,5 +127,10 @@ public class TilesArmes : MonoBehaviour
 
         }
  
+    }
+     private IEnumerator HideTextAfterDelay(TextMeshProUGUI textObject, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        textObject.gameObject.SetActive(false);
     }
 }
