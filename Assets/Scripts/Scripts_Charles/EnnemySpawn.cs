@@ -5,16 +5,17 @@ using UnityEngine;
 public class EnnemySpawn : MonoBehaviour
 {
 
-    [Header("Paramètres des Ennemis")]
+     [Header("Paramètres des Ennemis")]
     public GameObject ennemi1; // Type d'ennemi 1
     public GameObject ennemi2; // Type d'ennemi 2
+    public GameObject ennemi3; // Type d'ennemi 3
 
     [Header("Paramètres des Vagues")]
     public float initialSpawnInterval = 5f; // Intervalle de la première vague
     public float reducedSpawnInterval = 3f; // Intervalle de la deuxième vague
     public float finalSpawnInterval = 1f; // Intervalle de la troisième vague
-    public float intervalChangeTime1 = 40f; // Temps de transition à la deuxième vague
-    public float intervalChangeTime2 = 80f; // Temps de transition à la troisième vague
+    public float intervalChangeTime1 = 3f; // Temps de transition à la deuxième vague
+    public float intervalChangeTime2 = 5f; // Temps de transition à la troisième vague
 
     private float spawnInterval;
     private float timeSinceLastSpawn = 0f;
@@ -24,7 +25,7 @@ public class EnnemySpawn : MonoBehaviour
 
     void Start()
     {
-        spawnZone = GetComponent<Collider>(); 
+        spawnZone = GetComponent<Collider>();
 
         if (spawnZone == null)
         {
@@ -40,9 +41,9 @@ public class EnnemySpawn : MonoBehaviour
             return;
         }
 
-        if (ennemi1 == null || ennemi2 == null)
+        if (ennemi1 == null || ennemi2 == null || ennemi3 == null)
         {
-            Debug.LogError("Les GameObjects ennemi1 et ennemi2 doivent être assignés dans l'inspecteur.");
+            Debug.LogError("Les GameObjects ennemi1, ennemi2 et ennemi3 doivent être assignés dans l'inspecteur.");
             enabled = false;
             return;
         }
@@ -76,7 +77,13 @@ public class EnnemySpawn : MonoBehaviour
     void SpawnEnemy()
     {
         // Sélectionne un type d'ennemi aléatoire
-        GameObject selectedEnemy = Random.Range(0, 2) == 0 ? ennemi1 : ennemi2;
+        int randomIndex = Random.Range(0, 3); // 0 pour ennemi1, 1 pour ennemi2, 2 pour ennemi3
+        GameObject selectedEnemy = randomIndex switch
+        {
+            0 => ennemi1,
+            1 => ennemi2,
+            _ => ennemi3, // Par défaut, ennemi3
+        };
 
         // Génère une position aléatoire dans la zone de spawn
         Vector3 spawnPosition = GetRandomPointInCollider(spawnZone);
@@ -116,4 +123,5 @@ public class EnnemySpawn : MonoBehaviour
             Gizmos.DrawWireCube(spawnZone.bounds.center, spawnZone.bounds.size);
         }
     }
+
 }

@@ -5,7 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName="SO/InfoEnnemis")]
 public class InfoEnnemis : ScriptableObject
 {
-    public int pointDeVie;
+    public float pointDeVie;
+
+    public float pointDeVieMax;
     public int degat;
     public int TypeAttaque;
     public AudioClip prendDesDegatsSon;

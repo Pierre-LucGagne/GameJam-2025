@@ -3,15 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CinemachineTarget
+  - StanleyCup
+  - sextant
+  - gun
+  - telescope
+  - coincoin
+  - floor
+  - ennemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - Ennemi
   - 
   - 
   - 

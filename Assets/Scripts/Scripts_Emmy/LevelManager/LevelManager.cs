@@ -3,59 +3,69 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-     public static  LevelManager Instance; 
-
-    [SerializeField] private GameObject _loaderCanvas;
-   
-    [SerializeField] private Image _barreProgression;
     
- private void Awake() 
+
+    public static LevelManager Instance;
+
+    
+
+    private void Awake()
     {
-        if(Instance == null){
-            Instance  = this;
-            DontDestroyOnLoad(gameObject); 
+        // Initialisation du singleton
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        else{
+        else
+        {
             Destroy(gameObject);
         }
-        
     }
 
+    // Charge une scène de manière synchrone
     public void LoadScene(Scene sceneName)
     {
         SceneManager.LoadScene(sceneName.ToString());
     }
+
+    // Charge une scène de manière asynchrone sans loader canvas
     public async void LoadAsyncScene(string sceneName)
     {
         var sceneLoad = SceneManager.LoadSceneAsync(sceneName);
         sceneLoad.allowSceneActivation = false;
 
-        _loaderCanvas.SetActive(true);
-          
-        do {
+        // Attente de la fin du chargement avant d'activer la scène
+        do
+        {
             await Task.Delay(1000);
-            if(_barreProgression != null){
-                _barreProgression.fillAmount = sceneLoad.progress;  
-            }
-          
         } while (sceneLoad.progress < 0.9f);
-        
 
+        // Active la scène une fois prête
         sceneLoad.allowSceneActivation = true;
-        _loaderCanvas.SetActive(false);
     }
 
-public enum Scene{
-        SceneIntro,
-        SceneSallePrincipale,
-        SceneDataMining,
-        SceneSpaceInvader,
-        TowerDefense
-
+    // Enumération des scènes disponibles
+    public enum Scene
+    {
+        DEVscenemathieu,
+        ScenePrincipalMapà,
     }
 
+    // Méthode pour revenir à l'écran d'accueil
+    public void RetourAccueil()
+    {
+        Debug.Log("Retour à la scène d'accueil.");
+        LoadScene(Scene.DEVscenemathieu);
+    }
+
+    // Méthode pour quitter l'application
+    public void QuiteGame()
+    {
+        Debug.Log("Application quittée.");
+        Application.Quit();
+    }
 }
