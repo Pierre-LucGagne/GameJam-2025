@@ -9,18 +9,32 @@ public class TilesArmes : MonoBehaviour
 {
     [SerializeField] private InfosJoueurs _infosJoueurs;
     [SerializeField] private Armes _infosArme;
+
+
     [SerializeField] private GameObject _falseSextant; 
+    [SerializeField] private GameObject _falseCoinCoin; 
+    [SerializeField] private GameObject _falseTelescope; 
+
+
     [SerializeField] private GameObject _selectSextant; 
+   [SerializeField] private GameObject _selectCoinCoin; 
+   [SerializeField] private GameObject _selectTelescope; 
+
+
 
     [SerializeField] private TextMeshProUGUI _texteNouvelArme;
+    [SerializeField] private TextMeshProUGUI _texteAlerte;
 
 
 
     void Start()
     {
         _falseSextant.SetActive(false);
+         _falseCoinCoin.SetActive(false);
+           _falseTelescope.SetActive(false);
                
         _texteNouvelArme.gameObject.SetActive(false);
+        _texteAlerte.gameObject.SetActive(false);
         
     }
     
@@ -31,24 +45,66 @@ public class TilesArmes : MonoBehaviour
  private void OnTriggerEnter(Collider other)
     {
          
-        
-        if (_infosJoueurs._nbPoints >= _infosArme._prixArme){
-            Debug.Log("checkPoints");
-      
-        if (other.gameObject.CompareTag("sextant"))
-        {
-          
+         if (other.gameObject.CompareTag("coincoin"))
+            {
             
-           _texteNouvelArme.gameObject.SetActive(true);
-       _falseSextant.SetActive(true);
+                
+            _texteNouvelArme.gameObject.SetActive(true);
+            _falseCoinCoin.SetActive(true);
 
-           _infosJoueurs._nbPoints -= _infosArme._prixArme;
+            _infosJoueurs._nbPoints -= _infosArme._prixArme;
 
-            // Détruit l'objet StanleyCup collecté
-            Destroy(other.gameObject);
+                // Détruit l'objet StanleyCup collecté
+                Destroy(other.gameObject);
 
-        
+            
+            }
+        if (_infosJoueurs._nbPoints >= _infosArme._prixArme){
+            
+      
+            if (other.gameObject.CompareTag("sextant"))
+            {
+            
+                
+            _texteNouvelArme.gameObject.SetActive(true);
+            _falseSextant.SetActive(true);
+
+            _infosJoueurs._nbPoints -= _infosArme._prixArme;
+
+                // Détruit l'objet StanleyCup collecté
+                Destroy(other.gameObject);
+
+            
+            }
+
+             if (other.gameObject.CompareTag("telescope"))
+            {
+            
+                
+            _texteNouvelArme.gameObject.SetActive(true);
+            _falseTelescope.SetActive(true);
+
+            _infosJoueurs._nbPoints -= _infosArme._prixArme;
+
+                // Détruit l'objet StanleyCup collecté
+                Destroy(other.gameObject);
+
+            
+            }
+             
         }
+
+        else{
+         
+            if (other.gameObject.CompareTag("sextant"))
+            {
+            _texteAlerte.gameObject.SetActive(true);
+            
+
+            
+            }
+
         }
+ 
     }
 }
