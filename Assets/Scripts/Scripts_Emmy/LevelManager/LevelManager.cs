@@ -47,7 +47,7 @@ public class LevelManager : MonoBehaviour
     // Enumération des scènes disponibles
     public enum Scene
     {
-        Accueil,         
+        Accueil,
         JeuSceneTestBuild 
     }
 
