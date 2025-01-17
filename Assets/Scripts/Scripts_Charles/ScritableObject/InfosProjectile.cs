@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(menuName="SO/InfoProjectiles")]
 public class InfosProjectile : ScriptableObject
 {
-    public int degat;
+    public float degat;
 }
