@@ -9,7 +9,7 @@ public class SystemeRamasseObjets : MonoBehaviour
     // [SerializeField] private PvEtPowerUp _pvEtPowerUp;
     [SerializeField] private InfosJoueurs _infosJoueurs;
     [SerializeField] private GameObject _falseCup;
-    [SerializeField] private int _nbPvBonus;
+    [SerializeField] private float _nbPoints;
     [SerializeField] private TextMeshProUGUI _texteBonus;
 
     [SerializeField] private float _cooldown = 5f; // Cooldown avant de cacher les effets
@@ -38,7 +38,7 @@ public class SystemeRamasseObjets : MonoBehaviour
        _falseCup.SetActive(true);
 
             // Ajoute les points de vie bonus au joueur
-            _infosJoueurs._bonusPv += _nbPvBonus;
+            _infosJoueurs._nbPoints += _nbPoints;
 
             // Détruit l'objet StanleyCup collecté
             Destroy(other.gameObject);
