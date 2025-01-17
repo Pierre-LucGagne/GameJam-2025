@@ -14,8 +14,8 @@ public class EnnemySpawn : MonoBehaviour
     public float initialSpawnInterval = 5f; // Intervalle de la première vague
     public float reducedSpawnInterval = 3f; // Intervalle de la deuxième vague
     public float finalSpawnInterval = 1f; // Intervalle de la troisième vague
-    public float intervalChangeTime1 = 40f; // Temps de transition à la deuxième vague
-    public float intervalChangeTime2 = 80f; // Temps de transition à la troisième vague
+    public float intervalChangeTime1 = 3f; // Temps de transition à la deuxième vague
+    public float intervalChangeTime2 = 5f; // Temps de transition à la troisième vague
 
     private float spawnInterval;
     private float timeSinceLastSpawn = 0f;
@@ -123,4 +123,5 @@ public class EnnemySpawn : MonoBehaviour
             Gizmos.DrawWireCube(spawnZone.bounds.center, spawnZone.bounds.size);
         }
     }
+
 }

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class NavigationScript : MonoBehaviour
 {
+
+
     public Transform player;
     private NavMeshAgent agent;
     // Start is called before the first frame update
@@ -18,5 +20,8 @@ public class NavigationScript : MonoBehaviour
     void Update()
     {
         agent.destination = player.position;
+        
     }
+
+
 }

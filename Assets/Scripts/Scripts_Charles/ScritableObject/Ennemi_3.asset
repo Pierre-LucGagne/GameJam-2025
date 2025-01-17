@@ -9,7 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bdb18d8578f39b4ab00dd1385766350, type: 3}
-  m_Name: Sextant
+  m_Script: {fileID: 11500000, guid: 90583f04fc700ea44b2f146462191039, type: 3}
+  m_Name: Ennemi_3
   m_EditorClassIdentifier: 
-  degat: 2
+  pointDeVie: 40
+  pointDeVieMax: 40
+  degat: 15
+  TypeAttaque: 3
+  prendDesDegatsSon: {fileID: 0}
+  mortSon: {fileID: 0}

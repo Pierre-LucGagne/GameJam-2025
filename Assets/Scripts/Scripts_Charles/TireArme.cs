@@ -31,6 +31,18 @@ public class TireArme : MonoBehaviour
         }
     }
 
+/// <summary>
+    /// Méthode publique pour tirer, utilisée par d'autres scripts (comme l'ennemi)
+    /// </summary>
+    public void Tirer()
+    {
+        if (timeSinceLastShot >= fireCooldown)
+        {
+            Shoot();
+            timeSinceLastShot = 0f; // Réinitialise le temps après un tir
+        }
+    }
+
     void Shoot()
     {
         if (projectilePrefab == null || firePoint == null)
