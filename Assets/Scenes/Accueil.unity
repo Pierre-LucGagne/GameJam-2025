@@ -525,39 +525,57 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7177638983327982318, guid: 8cca8a78890e9964f910173a27a80a87, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 329885566}
+      addedObject: {fileID: 329885569}
+    - targetCorrespondingSourceObject: {fileID: 7177638983327982318, guid: 8cca8a78890e9964f910173a27a80a87, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 329885568}
   m_SourcePrefab: {fileID: 100100000, guid: 8cca8a78890e9964f910173a27a80a87, type: 3}
 --- !u!1 &329885565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7177638983327982318, guid: 8cca8a78890e9964f910173a27a80a87, type: 3}
   m_PrefabInstance: {fileID: 329885564}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &329885566
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329885565}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 14.98}
-  m_Center: {x: 7.53, y: 0, z: -2.55}
 --- !u!4 &329885567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4208634874432552236, guid: 8cca8a78890e9964f910173a27a80a87, type: 3}
   m_PrefabInstance: {fileID: 329885564}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &329885568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329885565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1873aea989812c84f9b4dce8a47ae409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 5151681197985600722, guid: 7b53f0ea287aa034289baf06eff49c9b, type: 3}
+  firePoint: {fileID: 329885567}
+  positionOffset: {x: 0, y: 0, z: 0}
+  projectileSpeed: 10
+  maxDistance: 20
+  fireCooldown: 0.5
+  jouerSon:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &329885569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329885565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd6e1e7e4d8b7447afbb08f0a6acee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 5126527960320829718}
+  positionOffset: {x: -1, y: 0, z: 0}
+  rotationOffset: {x: 180, y: 0, z: 0}
 --- !u!1001 &367920742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1571,7 +1589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6172333
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1613,10 +1631,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: gun
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1442754559}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1442754560}
   m_SourcePrefab: {fileID: 100100000, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
 --- !u!4 &963602701 stripped
 Transform:
@@ -2076,11 +2104,39 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1691160422614248382, guid: 05334cbf036e2d44187ff0c5a100751a, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 1215234297}
+    - target: {fileID: 1691160422614248382, guid: 05334cbf036e2d44187ff0c5a100751a, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691160422614248382, guid: 05334cbf036e2d44187ff0c5a100751a, type: 3}
+      propertyPath: fireCooldown
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1691160422614248382, guid: 05334cbf036e2d44187ff0c5a100751a, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 26253515963010843, guid: b832e5329c5d8844fb1069f9f200ffe7, type: 3}
     - target: {fileID: 2533540953365325960, guid: 05334cbf036e2d44187ff0c5a100751a, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533540953365325960, guid: 05334cbf036e2d44187ff0c5a100751a, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 5126527960320829718}
+    - target: {fileID: 2533540953365325960, guid: 05334cbf036e2d44187ff0c5a100751a, type: 3}
+      propertyPath: positionOffset.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533540953365325960, guid: 05334cbf036e2d44187ff0c5a100751a, type: 3}
+      propertyPath: rotationOffset.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533540953365325960, guid: 05334cbf036e2d44187ff0c5a100751a, type: 3}
+      propertyPath: rotationOffset.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5852635917265870512, guid: 05334cbf036e2d44187ff0c5a100751a, type: 3}
@@ -2429,6 +2485,42 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0b1c73f8124f9064595f28fcabe6ac29, type: 3}
   m_PrefabInstance: {fileID: 963602700}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1442754559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442754556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1873aea989812c84f9b4dce8a47ae409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 4724367140686098895, guid: 5355b75b70ccb6f48817b73e16257a85, type: 3}
+  firePoint: {fileID: 963602701}
+  positionOffset: {x: -0.1, y: 0, z: 0}
+  projectileSpeed: -40
+  maxDistance: 20
+  fireCooldown: 0.5
+  jouerSon:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1442754560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442754556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd6e1e7e4d8b7447afbb08f0a6acee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 5126527960320829718}
+  positionOffset: {x: 0.5, y: -0.2, z: 1.5}
+  rotationOffset: {x: 0, y: 180, z: 0}
 --- !u!1 &1485394554
 GameObject:
   m_ObjectHideFlags: 0

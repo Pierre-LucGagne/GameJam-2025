@@ -15,4 +15,4 @@ MonoBehaviour:
   _nbPvDepart: 100
   _nbPv: 100
   _nbPoints: 500
-  _bonusPv: 5
+  _bonusPv: 380

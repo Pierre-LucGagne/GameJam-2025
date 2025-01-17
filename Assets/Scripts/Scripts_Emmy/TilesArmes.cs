@@ -73,9 +73,10 @@ public class TilesArmes : MonoBehaviour
             _falseSextant.SetActive(true);
 
             _infosJoueurs._nbPoints -= _infosArme._prixArme;
-
-                // Détruit l'objet StanleyCup collecté
-                Destroy(other.gameObject);
+            _falseCoinCoin.SetActive(false);
+            _falseTelescope.SetActive(false);
+            _selectSextant.SetActive(false);
+               
 
             
             }
@@ -88,9 +89,9 @@ public class TilesArmes : MonoBehaviour
             _falseTelescope.SetActive(true);
 
             _infosJoueurs._nbPoints -= _infosArme._prixArme;
-
-                // Détruit l'objet StanleyCup collecté
-                Destroy(other.gameObject);
+                _falseSextant.SetActive(false);
+                _falseCoinCoin.SetActive(false);
+                _selectTelescope.SetActive(false);
 
             
             }
