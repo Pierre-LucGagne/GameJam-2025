@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - StanleyCup
+  - sextant
   layers:
   - Default
   - TransparentFX
