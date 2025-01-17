@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Joueur1
   m_EditorClassIdentifier: 
   _nbPvDepart: 100
-  _nbPv: 100
-  _nbPoints: 500
-  _bonusPv: 380
+  _nbPv: -176
+  _nbPoints: 0
+  _bonusPv: 0

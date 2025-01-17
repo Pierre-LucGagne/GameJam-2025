@@ -131,6 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0298ac20d927f74087a3e168be90e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  infoEnnemi: {fileID: 0}
+  infoEnnemi2: {fileID: 0}
+  infoEnnemi3: {fileID: 0}
 --- !u!54 &4828487766760445160
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -193,4 +197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 11400000, guid: 4a9679fe0b5adf94393bbe7662a90c47, type: 2}
-  infoEnnemi: {fileID: 11400000, guid: 0bf684829007fb9429851dc30a16e970, type: 2}
+  infoEnnemi1: {fileID: 11400000, guid: 0bf684829007fb9429851dc30a16e970, type: 2}
+  infoEnnemi2: {fileID: 11400000, guid: 4c745bda0fdfe79478e3ba3dcb16b8b9, type: 2}
+  infoEnnemi3: {fileID: 11400000, guid: 548b9c2de134dc448816a5435680ab99, type: 2}

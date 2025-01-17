@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90583f04fc700ea44b2f146462191039, type: 3}
   m_Name: Ennemi_1
   m_EditorClassIdentifier: 
-  pointDeVie: -50
+  pointDeVie: 50
   pointDeVieMax: 50
   degat: 10
   TypeAttaque: 1
