@@ -21,10 +21,8 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-   public void QuiteGame()
-    {
-        Application.Quit();
-    }
+
+    // Charge une scène de manière synchrone
     public void LoadScene(Scene sceneName)
     {
         SceneManager.LoadScene(sceneName.ToString());
@@ -46,11 +44,11 @@ public class LevelManager : MonoBehaviour
         sceneLoad.allowSceneActivation = true;
     }
 
-public enum Scene{
+    // Enumération des scènes disponibles
+    public enum Scene
+    {
         Accueil,
-        JeuSceneTestBuild,
-      
-
+        JeuSceneTestBuild 
     }
 
     // Méthode pour revenir à l'écran d'accueil
@@ -61,5 +59,9 @@ public enum Scene{
     }
 
     // Méthode pour quitter l'application
-    
+    public void QuiteGame()
+    {
+        Debug.Log("Application quittée.");
+        Application.Quit();
+    }
 }

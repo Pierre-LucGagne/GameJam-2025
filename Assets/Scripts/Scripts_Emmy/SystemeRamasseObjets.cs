@@ -1,9 +1,12 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 public class SystemeRamasseObjets : MonoBehaviour
 {
-    [SerializeField] private PvEtPowerUp _pvEtPowerUp;
+    //[SerializeField] private PvEtPowerUp _pvEtPowerUp;
     [SerializeField] private InfosJoueurs _infosJoueurs;
     [SerializeField] private GameObject _falseCup;
     [SerializeField] private int _nbPvBonus;
