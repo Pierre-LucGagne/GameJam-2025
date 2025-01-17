@@ -65,7 +65,7 @@ public class TireArme : MonoBehaviour
             rb.velocity = firePoint.forward * projectileSpeed;
 
             // Lance une coroutine pour gérer la distance parcourue par le projectile
-            StartCoroutine(DestroyProjectileAfterDistance(projectile, rb, maxDistance));
+            //StartCoroutine(DestroyProjectileAfterDistance(projectile, rb, maxDistance));
         }
         else
         {
@@ -77,7 +77,7 @@ public class TireArme : MonoBehaviour
     }
 
     // Coroutine qui détruira le projectile après avoir parcouru la distance spécifiée
-    private IEnumerator DestroyProjectileAfterDistance(GameObject projectile, Rigidbody rb, float distance)
+    /*private IEnumerator DestroyProjectileAfterDistance(GameObject projectile, Rigidbody rb, float distance)
     {
         float traveledDistance = 0f;
         Vector3 initialPosition = projectile.transform.position;
@@ -90,21 +90,21 @@ public class TireArme : MonoBehaviour
         }
 
         // Détruire le projectile une fois la distance atteinte
-        Destroy(projectile);
-    }
+        //Destroy(projectile);
+    }*/
 
     // Fonction qui gère les collisions du projectile
-    private void OnCollisionEnter(Collision collision)
+/*private void OnCollisionEnter(Collision collision)
     {
 
 
         // Détruire le projectile dès qu'il entre en collision avec un objet
-        Destroy(collision.gameObject); // Détruire l'objet avec lequel le projectile entre en collision
+        //Destroy(collision.gameObject);  Détruire l'objet avec lequel le projectile entre en collision
 
         // Détruire le projectile
         Destroy(gameObject);
     }
-
+*/
     // Si vous préférez utiliser un trigger (si le projectile est configuré en trigger)
     private void OnTriggerEnter(Collider other)
     {

@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameReload : MonoBehaviour
 {
-    public ListeArmes listeArmes; // Assurez-vous de définir cette référence dans l'inspecteur Unity
-
+   
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -18,11 +17,7 @@ public class GameReload : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (listeArmes != null)
-        {
-            // Réinitialise les objectifs lorsque la scène est rechargée
-            listeArmes.ReinitialiserArmes();
-        }
+       
 
         
     }
