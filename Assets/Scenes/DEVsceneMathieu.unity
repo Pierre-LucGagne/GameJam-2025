@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -235.3, y: -121.700005}
+  m_AnchoredPosition: {x: -309.7, y: -127.80001}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &76534784
@@ -226,7 +226,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -1250781630, guid: 215ed691444304d45a754d3a080ee813, type: 3}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -420,7 +420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -235.3, y: -75.50001}
+  m_AnchoredPosition: {x: -309.7, y: -81.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621436556
@@ -488,7 +488,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -1250781630, guid: 215ed691444304d45a754d3a080ee813, type: 3}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -527,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3d17bad48c286043937a9d57d4f5a45, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 237
+      value: 125.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3d17bad48c286043937a9d57d4f5a45, type: 3}
       propertyPath: m_LocalPosition.y
@@ -535,11 +535,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3d17bad48c286043937a9d57d4f5a45, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -139
+      value: -369.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3d17bad48c286043937a9d57d4f5a45, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.706172
+      value: 0.7089831
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3d17bad48c286043937a9d57d4f5a45, type: 3}
       propertyPath: m_LocalRotation.x
@@ -547,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3d17bad48c286043937a9d57d4f5a45, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7080405
+      value: 0.7052255
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3d17bad48c286043937a9d57d4f5a45, type: 3}
       propertyPath: m_LocalRotation.z
@@ -559,7 +559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3d17bad48c286043937a9d57d4f5a45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90.151
+      value: 89.696
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3d17bad48c286043937a9d57d4f5a45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: OPTIONS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 74a84f1bf1d5c8348aa87f4264ef401d, type: 2}
   m_sharedMaterial: {fileID: -3801495077420679060, guid: 74a84f1bf1d5c8348aa87f4264ef401d, type: 2}
@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jouer
+  m_text: JOUER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 74a84f1bf1d5c8348aa87f4264ef401d, type: 2}
   m_sharedMaterial: {fileID: -3801495077420679060, guid: 74a84f1bf1d5c8348aa87f4264ef401d, type: 2}
@@ -1446,7 +1446,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -1250781630, guid: 215ed691444304d45a754d3a080ee813, type: 3}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1520,9 +1520,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Quitter
-
-'
+  m_text: QUITTER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 74a84f1bf1d5c8348aa87f4264ef401d, type: 2}
   m_sharedMaterial: {fileID: -3801495077420679060, guid: 74a84f1bf1d5c8348aa87f4264ef401d, type: 2}
